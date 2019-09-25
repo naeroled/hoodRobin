@@ -79,8 +79,9 @@ export default {
 }
 .btn-success {
     background: #20CE99;
-    /* border-radius: 0px; */
+    border-radius: 0px;
     box-shadow: 0 7px 6px -6px #777 !important;
+    border: none;
 }
 .danger {
     border: 1px solid red

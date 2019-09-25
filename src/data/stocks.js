@@ -1,40 +1,40 @@
 export default [
    {
   "id": 1,
-  "name": "Apple",
-  "price": 480.56
+  "name": "AAPL",
+  "price": 480
 }, {
   "id": 2,
   "name": "MSFT",
-  "price": 458.99
+  "price": 458
 }, {
   "id": 3,
   "name": "GOOG",
-  "price": 68.34
+  "price": 68
 }, {
   "id": 4,
   "name": "AMZN",
-  "price": 667.56
+  "price": 667
 }, {
   "id": 5,
   "name": "TSLA",
-  "price": 738.12
+  "price": 738
 }, {
   "id": 6,
   "name": "FB",
-  "price": 312.97
+  "price": 312
 }, {
   "id": 7,
-  "name": "BorgWarner Inc.",
-  "price": 322.51
+  "name": "ETH",
+  "price": 322
 }, {
   "id": 8,
-  "name": "Del Taco Restaurants, Inc.",
-  "price": 7.17
+  "name": "BTC",
+  "price": 8500
 }, {
   "id": 9,
-  "name": "Apple",
-  "price": 760.42
+  "name": "NFLX",
+  "price": 760
 }, 
 // {
 //   "id": 10,
