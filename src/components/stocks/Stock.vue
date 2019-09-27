@@ -23,6 +23,9 @@
                     {{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}</button>
             </div>
         </div>
+        <div class="panel-footer">
+            <p>{{ `Funds needed : $${purchaseAmt} `}} </p>
+        </div>
     </div>
 
 </div>
@@ -40,6 +43,14 @@ export default {
     computed: {
         funds() {
             return this.$store.getters.funds;
+        },
+
+        purchaseAmt() {
+            return this.quantity * this.stock.price;
+        },
+
+        lowFunds() {
+            return this.funds > 2500;
         },
         insufficientFunds() {
             const amtToSpend = this.quantity * this.stock.price;
@@ -68,7 +79,6 @@ export default {
 .danger {
     border: 1px solid red
 }
-
 .panel {
     box-shadow: 0 10px 6px -6px #777;
     border-radius: 0px;

@@ -5,12 +5,16 @@
         <router-link to="/" class="navbar-brand">hoodRobin</router-link>
     </div>
 
-    <div class="collapse navbar-collapse">
+    <div class=" navbar-collapse">
       <ul class="nav navbar-nav">
         <router-link to="/portfolio" activeClass="active" tag="li"><a>Portfolio</a></router-link>
         <router-link to="/stocks" activeClass="active" tag="li"><a>Stocks</a></router-link>
       </ul>
-      <strong class="navbar-text navbar-right funds">Funds: {{ funds | currency }}</strong>
+      <strong 
+        class="navbar-text navbar-right funds"
+        :class="{lowFunds: lowFunds}">
+        Funds: {{ funds | currency }}
+        </strong>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" @click="endDay">End Day</a></li>
         <li 
@@ -48,6 +52,9 @@ export default {
     computed: {
         funds() {
             return this.$store.getters.funds;
+        },
+        lowFunds() {
+            return this.funds < 2500;
         }
     },
     methods: {
@@ -91,6 +98,10 @@ export default {
 
 .funds {
     color: #20CE99 !important;
+}
+
+.lowFunds {
+    color: red !important;
 }
 </style>
 

@@ -4,7 +4,9 @@
         <h6>You may Save & Load your Data</h6>
         <h6>Click on 'End Day' to begin your new Day</h6>
         <hr>
-        <p>Your Funds: {{ funds | currency }}</p>
+        <p
+        :class="{lowFunds: lowFunds}"
+        >Your Funds: {{ funds | currency }}</p>
     </div>
 </template>
 
@@ -13,6 +15,9 @@ export default {
     computed: {
         funds() {
             return this.$store.getters.funds;
+        },
+        lowFunds() {
+            return this.funds < 2500;
         }
     }
 }
@@ -22,5 +27,10 @@ export default {
 p {
     color: #20CE99
 }
+
+.lowFunds {
+    color: red
+}
+
 </style>
 
